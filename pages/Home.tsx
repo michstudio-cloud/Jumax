@@ -27,10 +27,13 @@ const Home: React.FC = () => {
         {/* Content */}
         <div className="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <div className="max-w-3xl pt-20">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-brand-orange text-white px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest mb-8 shadow-lg backdrop-blur-sm bg-opacity-90">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-              Servicio Disponible Ahora
+            {/* Warranty Badge Image */}
+            <div className="mb-6 animate-fade-in-down">
+                <img 
+                    src="https://jumax.com.mx/wp-content/uploads/2024/07/badge_1.svg" 
+                    alt="100% Garantía de Satisfacción" 
+                    className="h-20 md:h-24 drop-shadow-lg"
+                />
             </div>
 
             {/* Headline */}
@@ -82,7 +85,7 @@ const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Floating Chat Button (Bottom Right) */}
+          {/* Floating WhatsApp Badge (Bottom Right) */}
           <div className="absolute bottom-8 right-4 md:right-8 flex flex-col items-end gap-3 z-50">
              <div className="bg-white text-slate-800 px-4 py-2 rounded-xl font-bold shadow-lg text-sm mb-2 animate-bounce flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full"></span>
@@ -90,9 +93,13 @@ const Home: React.FC = () => {
              </div>
              <a 
                href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
-               className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 flex items-center justify-center w-16 h-16 ring-4 ring-green-100"
+               className="transform transition hover:scale-110 drop-shadow-2xl"
              >
-               <MessageCircle size={32} />
+               <img 
+                src="https://jumax.com.mx/wp-content/uploads/2024/07/whatsapp-jumax.png" 
+                alt="Chat WhatsApp" 
+                className="w-16 h-16 md:w-20 md:h-20"
+               />
              </a>
           </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Star, MessageCircle, MapPin, Facebook, Instagram, Zap, ArrowUpRight } from 'lucide-react';
+import { Menu, X, Phone, Star, MessageCircle, MapPin, Facebook, Instagram, ArrowUpRight } from 'lucide-react';
 import { CONTACT_INFO, NAV_LINKS, ROUTES } from '../constants';
 
 interface LayoutProps {
@@ -27,8 +27,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
               <Link to={ROUTES.HOME} className="flex items-center gap-2" onClick={closeMenu}>
-                <Zap className="text-brand-orange h-8 w-8 fill-brand-orange" />
-                <span className="text-2xl font-black text-slate-900 tracking-tighter">JUMAX</span>
+                <img 
+                  src="https://jumax.com.mx/wp-content/uploads/2023/07/jumax-imagotipo.svg" 
+                  alt="JUMAX" 
+                  className="h-10 w-auto"
+                />
               </Link>
             </div>
 
@@ -130,9 +133,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <footer className="bg-slate-900 text-slate-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Zap className="text-brand-orange h-6 w-6 fill-brand-orange" />
-              <span className="text-xl font-black text-white">JUMAX</span>
+            <div className="mb-6 bg-white w-fit p-2 rounded-lg">
+               <img 
+                  src="https://jumax.com.mx/wp-content/uploads/2023/07/jumax-imagotipo.svg" 
+                  alt="JUMAX" 
+                  className="h-8 w-auto"
+                />
             </div>
             <p className="text-sm text-slate-400 mb-4">
               Soluciones rápidas y garantizadas para problemas de plomería y drenaje en todo Reynosa.
