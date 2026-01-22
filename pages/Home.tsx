@@ -84,25 +84,6 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Floating WhatsApp Badge (Bottom Right) */}
-          <div className="absolute bottom-8 right-4 md:right-8 flex flex-col items-end gap-3 z-50">
-             <div className="bg-white text-slate-800 px-4 py-2 rounded-xl font-bold shadow-lg text-sm mb-2 animate-bounce flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                ¿Necesitas ayuda urgente?
-             </div>
-             <a 
-               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
-               className="transform transition hover:scale-110 drop-shadow-2xl"
-             >
-               <img 
-                src="https://s3.amazonaws.com/artibot-account-files-prod/4c/4c693b9b-9dbc-4243-b50d-fa6b54818ff6/24b7bf29-4b3e-4e8f-8ab2-7a6b6869fb37/botImage?v=638580641209315326" 
-                alt="Chat WhatsApp" 
-                className="w-16 h-16 md:w-20 md:h-20"
-               />
-             </a>
-          </div>
-
         </div>
       </section>
 
@@ -333,6 +314,25 @@ const Home: React.FC = () => {
             </a>
          </div>
       </section>
+
+      {/* Floating WhatsApp Badge (Fixed on Screen) */}
+      <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 flex flex-col items-end gap-3 z-50">
+         <div className="bg-white text-slate-800 px-4 py-2 rounded-xl font-bold shadow-lg text-sm mb-2 animate-bounce flex items-center gap-2">
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+            ¿Necesitas ayuda urgente?
+         </div>
+         <a 
+           href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
+           className="transform transition hover:scale-110 drop-shadow-2xl"
+         >
+           <img 
+            src="https://s3.amazonaws.com/artibot-account-files-prod/4c/4c693b9b-9dbc-4243-b50d-fa6b54818ff6/24b7bf29-4b3e-4e8f-8ab2-7a6b6869fb37/botImage?v=638580641209315326" 
+            alt="Chat WhatsApp" 
+            className="w-16 h-16 md:w-20 md:h-20"
+           />
+         </a>
+      </div>
+
     </div>
   );
 };
