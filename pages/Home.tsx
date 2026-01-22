@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         {/* Background Image - High Quality Plumber */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://jumax.com.mx/wp-content/uploads/2024/07/441178261_1404844966899644_3683294244773623264_n.jpg" 
+            src="/images/hero-bg.jpg" 
             alt="Plomero profesional trabajando" 
             className="w-full h-full object-cover object-center scale-105"
           />
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
             {/* Warranty Badge Image */}
             <div className="mb-6 animate-fade-in-down">
                 <img 
-                    src="https://jumax.com.mx/wp-content/uploads/2024/07/badge_1.svg" 
+                    src="/images/badge_1.svg" 
                     alt="100% Garantía de Satisfacción" 
                     className="h-14 md:h-16 drop-shadow-lg"
                 />
@@ -326,7 +326,7 @@ const Home: React.FC = () => {
            className="transform transition hover:scale-110 drop-shadow-2xl"
          >
            <img 
-            src="https://s3.amazonaws.com/artibot-account-files-prod/4c/4c693b9b-9dbc-4243-b50d-fa6b54818ff6/24b7bf29-4b3e-4e8f-8ab2-7a6b6869fb37/botImage?v=638580641209315326" 
+            src="/images/whatsapp-bot.png" 
             alt="Chat WhatsApp" 
             className="w-16 h-16 md:w-20 md:h-20"
            />

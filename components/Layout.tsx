@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center flex-shrink-0">
               <Link to={ROUTES.HOME} className="flex items-center gap-2" onClick={closeMenu}>
                 <img 
-                  src="https://jumax.com.mx/wp-content/uploads/2023/07/jumax-imagotipo.svg" 
+                  src="/images/jumax-imagotipo.svg" 
                   alt="JUMAX" 
                   className="h-10 w-auto"
                 />
@@ -135,7 +135,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div>
             <div className="mb-6 bg-white w-fit p-2 rounded-lg">
                <img 
-                  src="https://jumax.com.mx/wp-content/uploads/2023/07/jumax-imagotipo.svg" 
+                  src="/images/jumax-imagotipo.svg" 
                   alt="JUMAX" 
                   className="h-8 w-auto"
                 />
