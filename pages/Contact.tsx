@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
   return (
     <div className="w-full bg-slate-50">
       <div className="bg-brand-darkBlue py-16 text-center text-white">
-        <h1 className="text-4xl font-black mb-4">Contáctanos</h1>
+        <h1 className="text-4xl font-heading font-bold mb-4">Contáctanos</h1>
         <p className="text-lg text-blue-200">Estamos listos para atender tu emergencia</p>
       </div>
 
@@ -20,14 +20,14 @@ const Contact: React.FC = () => {
           
           {/* Contact Info */}
           <div className="space-y-8">
-            <h2 className="text-2xl font-bold text-slate-900">Información de Contacto</h2>
+            <h2 className="text-2xl font-heading font-bold text-slate-900">Información de Contacto</h2>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 space-y-6">
               <div className="flex items-start gap-4">
                 <div className="bg-blue-50 p-3 rounded-full text-brand-blue">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800">Teléfono</h3>
+                  <h3 className="font-heading font-bold text-slate-800">Teléfono</h3>
                   <a href={`tel:${CONTACT_INFO.phone}`} className="text-slate-600 hover:text-brand-blue text-lg block mt-1">
                     {CONTACT_INFO.displayPhone}
                   </a>
@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
                   <MessageCircle size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800">WhatsApp</h3>
+                  <h3 className="font-heading font-bold text-slate-800">WhatsApp</h3>
                   <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} className="text-slate-600 hover:text-green-600 text-lg block mt-1">
                     Enviar mensaje directo
                   </a>
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                   <Clock size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800">Horario de Atención</h3>
+                  <h3 className="font-heading font-bold text-slate-800">Horario de Atención</h3>
                   <p className="text-slate-600 mt-1">{CONTACT_INFO.hours}</p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800">Área de Servicio</h3>
+                  <h3 className="font-heading font-bold text-slate-800">Área de Servicio</h3>
                   <p className="text-slate-600 mt-1">{CONTACT_INFO.city} y alrededores.</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
 
           {/* Simple Form (Visual Only) */}
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Envíanos un mensaje</h2>
+            <h2 className="text-2xl font-heading font-bold text-slate-900 mb-6">Envíanos un mensaje</h2>
             <form className="bg-white p-8 rounded-xl shadow-lg border border-slate-100" onSubmit={(e) => e.preventDefault()}>
               <div className="space-y-4">
                 <div>

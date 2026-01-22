@@ -37,12 +37,12 @@ const Home: React.FC = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight drop-shadow-xl">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.1] mb-8 tracking-tight drop-shadow-xl">
               ¿Problemas de drenaje <br/><span className="text-brand-orange">en tu hogar?</span>
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg md:text-xl text-slate-200 mb-12 max-w-2xl font-light leading-relaxed border-l-4 border-brand-orange pl-6">
+            <p className="text-xl md:text-2xl text-slate-200 mb-12 max-w-2xl font-light leading-relaxed border-l-4 border-brand-orange pl-6">
               Jumax ofrece soluciones rápidas, limpias y garantizadas. Desde destapes urgentes hasta instalaciones complejas, recupera la tranquilidad de tu hogar hoy mismo.
             </p>
 
@@ -111,8 +111,8 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold text-brand-orange tracking-widest uppercase mb-3">Nuestros Servicios</h2>
-            <h3 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Soluciones Profesionales</h3>
-            <p className="text-xl text-slate-500 max-w-2xl mx-auto font-light">Calidad y eficiencia en cada trabajo realizado en Reynosa.</p>
+            <h3 className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-6">Soluciones Profesionales</h3>
+            <p className="text-2xl text-slate-500 max-w-2xl mx-auto font-light">Calidad y eficiencia en cada trabajo realizado en Reynosa.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -127,8 +127,8 @@ const Home: React.FC = () => {
                  <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition duration-300"></div>
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition">Destape de Drenaje</h3>
-                <p className="text-slate-500 mb-6 leading-relaxed">Tecnología avanzada para eliminar obstrucciones en tuberías, WC y registros sin romper.</p>
+                <h3 className="text-2xl font-heading font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition">Destape de Drenaje</h3>
+                <p className="text-slate-500 text-lg mb-6 leading-relaxed">Tecnología avanzada para eliminar obstrucciones en tuberías, WC y registros sin romper.</p>
                 <div className="mt-auto flex items-center text-brand-orange font-bold text-sm tracking-wide uppercase group/link">
                   Ver Detalles <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition" />
                 </div>
@@ -145,8 +145,8 @@ const Home: React.FC = () => {
                  />
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition">Mantenimiento</h3>
-                <p className="text-slate-500 mb-6 leading-relaxed">Limpieza preventiva y correctiva para evitar malos olores y asegurar el flujo correcto.</p>
+                <h3 className="text-2xl font-heading font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition">Mantenimiento</h3>
+                <p className="text-slate-500 text-lg mb-6 leading-relaxed">Limpieza preventiva y correctiva para evitar malos olores y asegurar el flujo correcto.</p>
                 <div className="mt-auto flex items-center text-brand-orange font-bold text-sm tracking-wide uppercase group/link">
                   Ver Detalles <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition" />
                 </div>
@@ -163,8 +163,8 @@ const Home: React.FC = () => {
                  />
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition">Residencial</h3>
-                <p className="text-slate-500 mb-6 leading-relaxed">Instalación de baños, reparación de fugas y todo tipo de reparaciones domésticas.</p>
+                <h3 className="text-2xl font-heading font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition">Residencial</h3>
+                <p className="text-slate-500 text-lg mb-6 leading-relaxed">Instalación de baños, reparación de fugas y todo tipo de reparaciones domésticas.</p>
                 <div className="mt-auto flex items-center text-brand-orange font-bold text-sm tracking-wide uppercase group/link">
                   Ver Detalles <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition" />
                 </div>
@@ -181,8 +181,8 @@ const Home: React.FC = () => {
                  />
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition">Comercial</h3>
-                <p className="text-slate-500 mb-6 leading-relaxed">Servicio especializado para empresas, restaurantes y oficinas con facturación.</p>
+                <h3 className="text-2xl font-heading font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition">Comercial</h3>
+                <p className="text-slate-500 text-lg mb-6 leading-relaxed">Servicio especializado para empresas, restaurantes y oficinas con facturación.</p>
                 <div className="mt-auto flex items-center text-brand-orange font-bold text-sm tracking-wide uppercase group/link">
                   Ver Detalles <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition" />
                 </div>
@@ -217,7 +217,7 @@ const Home: React.FC = () => {
 
             <div className="lg:w-1/2">
               <h2 className="text-sm font-bold text-brand-orange tracking-widest uppercase mb-3">¿Por qué elegirnos?</h2>
-              <h3 className="text-4xl font-black text-slate-900 mb-8">Compromiso con la Excelencia</h3>
+              <h3 className="text-4xl font-heading font-bold text-slate-900 mb-8">Compromiso con la Excelencia</h3>
               
               <div className="space-y-8">
                 <div className="flex items-start gap-5">
@@ -225,8 +225,8 @@ const Home: React.FC = () => {
                     <MapPin size={28} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-slate-900 mb-2">Cobertura Total en Reynosa</h4>
-                    <p className="text-slate-500 leading-relaxed">Nuestras unidades móviles están distribuidas estratégicamente para llegar a cualquier colonia en tiempo récord.</p>
+                    <h4 className="font-heading font-bold text-xl text-slate-900 mb-2">Cobertura Total en Reynosa</h4>
+                    <p className="text-slate-500 text-lg leading-relaxed">Nuestras unidades móviles están distribuidas estratégicamente para llegar a cualquier colonia en tiempo récord.</p>
                   </div>
                 </div>
 
@@ -235,8 +235,8 @@ const Home: React.FC = () => {
                     <Clock size={28} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-slate-900 mb-2">Respuesta Inmediata</h4>
-                    <p className="text-slate-500 leading-relaxed">Sabemos que una fuga o un drenaje tapado no puede esperar. Priorizamos las emergencias.</p>
+                    <h4 className="font-heading font-bold text-xl text-slate-900 mb-2">Respuesta Inmediata</h4>
+                    <p className="text-slate-500 text-lg leading-relaxed">Sabemos que una fuga o un drenaje tapado no puede esperar. Priorizamos las emergencias.</p>
                   </div>
                 </div>
 
@@ -245,8 +245,8 @@ const Home: React.FC = () => {
                     <ShieldCheck size={28} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-slate-900 mb-2">Garantía por Escrito</h4>
-                    <p className="text-slate-500 leading-relaxed">Respaldamos cada trabajo. Si el problema persiste, regresamos sin costo adicional dentro del periodo de garantía.</p>
+                    <h4 className="font-heading font-bold text-xl text-slate-900 mb-2">Garantía por Escrito</h4>
+                    <p className="text-slate-500 text-lg leading-relaxed">Respaldamos cada trabajo. Si el problema persiste, regresamos sin costo adicional dentro del periodo de garantía.</p>
                   </div>
                 </div>
               </div>
@@ -267,7 +267,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
              <h2 className="text-sm font-bold text-brand-orange tracking-widest uppercase mb-4">Proceso Simple</h2>
-             <h3 className="text-4xl md:text-5xl font-black">Tu solución en 3 pasos</h3>
+             <h3 className="text-4xl md:text-5xl font-heading font-bold">Tu solución en 3 pasos</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
@@ -276,20 +276,20 @@ const Home: React.FC = () => {
 
             <div className="relative z-10 text-center group">
               <div className="w-24 h-24 bg-slate-800 border-4 border-slate-700 group-hover:border-brand-orange transition duration-500 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-8 shadow-2xl">1</div>
-              <h3 className="text-2xl font-bold mb-4">Contáctanos</h3>
-              <p className="text-slate-400 leading-relaxed px-4">Envía un WhatsApp o llámanos. Describe tu problema y recibe atención personalizada inmediata.</p>
+              <h3 className="text-2xl font-heading font-bold mb-4">Contáctanos</h3>
+              <p className="text-slate-400 text-lg leading-relaxed px-4">Envía un WhatsApp o llámanos. Describe tu problema y recibe atención personalizada inmediata.</p>
             </div>
 
             <div className="relative z-10 text-center group">
               <div className="w-24 h-24 bg-slate-800 border-4 border-slate-700 group-hover:border-brand-orange transition duration-500 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-8 shadow-2xl">2</div>
-              <h3 className="text-2xl font-bold mb-4">Diagnóstico</h3>
-              <p className="text-slate-400 leading-relaxed px-4">Un técnico experto evalúa la situación en sitio y te proporciona un presupuesto claro y sin sorpresas.</p>
+              <h3 className="text-2xl font-heading font-bold mb-4">Diagnóstico</h3>
+              <p className="text-slate-400 text-lg leading-relaxed px-4">Un técnico experto evalúa la situación en sitio y te proporciona un presupuesto claro y sin sorpresas.</p>
             </div>
 
             <div className="relative z-10 text-center group">
               <div className="w-24 h-24 bg-slate-800 border-4 border-slate-700 group-hover:border-brand-orange transition duration-500 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-8 shadow-2xl">3</div>
-              <h3 className="text-2xl font-bold mb-4">Solución</h3>
-              <p className="text-slate-400 leading-relaxed px-4">Realizamos el trabajo con limpieza y rapidez. Tu hogar vuelve a la normalidad el mismo día.</p>
+              <h3 className="text-2xl font-heading font-bold mb-4">Solución</h3>
+              <p className="text-slate-400 text-lg leading-relaxed px-4">Realizamos el trabajo con limpieza y rapidez. Tu hogar vuelve a la normalidad el mismo día.</p>
             </div>
           </div>
         </div>
@@ -298,7 +298,7 @@ const Home: React.FC = () => {
       {/* Testimonials - Clean Cards */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <h2 className="text-3xl md:text-4xl font-black text-center text-slate-900 mb-16">Lo que dicen nuestros clientes</h2>
+           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-slate-900 mb-16">Lo que dicen nuestros clientes</h2>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
              <TestimonialCard 
                 name="Roberto Garza"
@@ -322,7 +322,7 @@ const Home: React.FC = () => {
       {/* Final CTA - Premium Gradient */}
       <section className="py-24 bg-gradient-to-br from-slate-900 to-brand-blue text-white text-center relative overflow-hidden">
          <div className="max-w-4xl mx-auto px-4 relative z-10">
-           <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">¿Drenaje tapado? <br/> <span className="text-brand-orange">Te atendemos hoy</span></h2>
+           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 leading-tight">¿Drenaje tapado? <br/> <span className="text-brand-orange">Te atendemos hoy</span></h2>
            <p className="text-xl mb-10 text-slate-300 font-light max-w-2xl mx-auto">No dejes que un problema pequeño se convierta en una reparación costosa. Agenda tu visita ahora.</p>
            <a 
               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
