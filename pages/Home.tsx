@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         {/* Background Image - High Quality Plumber */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1621905476059-5f3460e569a9?q=80&w=2070&auto=format&fit=crop" 
+            src="https://jumax.com.mx/wp-content/uploads/2024/07/441178261_1404844966899644_3683294244773623264_n.jpg" 
             alt="Plomero profesional trabajando" 
             className="w-full h-full object-cover object-center scale-105"
           />
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
                 <img 
                     src="https://jumax.com.mx/wp-content/uploads/2024/07/badge_1.svg" 
                     alt="100% Garantía de Satisfacción" 
-                    className="h-20 md:h-24 drop-shadow-lg"
+                    className="h-14 md:h-16 drop-shadow-lg"
                 />
             </div>
 
