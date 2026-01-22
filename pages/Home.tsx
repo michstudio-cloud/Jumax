@@ -96,7 +96,7 @@ const Home: React.FC = () => {
                className="transform transition hover:scale-110 drop-shadow-2xl"
              >
                <img 
-                src="https://jumax.com.mx/wp-content/uploads/2024/07/whatsapp-jumax.png" 
+                src="https://s3.amazonaws.com/artibot-account-files-prod/4c/4c693b9b-9dbc-4243-b50d-fa6b54818ff6/24b7bf29-4b3e-4e8f-8ab2-7a6b6869fb37/botImage?v=638580641209315326" 
                 alt="Chat WhatsApp" 
                 className="w-16 h-16 md:w-20 md:h-20"
                />
