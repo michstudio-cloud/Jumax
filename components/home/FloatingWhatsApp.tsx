@@ -10,13 +10,13 @@ export const FloatingWhatsApp: React.FC = () => {
        </div>
        <a 
          href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
-         className="transform transition hover:scale-110 drop-shadow-2xl bg-white rounded-full p-2"
+         className="transform transition hover:scale-110 drop-shadow-2xl"
          aria-label="Contactar por WhatsApp"
        >
          <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-          alt="Chat WhatsApp" 
-          className="w-14 h-14 md:w-16 md:h-16"
+          src="https://raw.githubusercontent.com/michstudio-cloud/Jumax/main/images/whatsapp-bot.png" 
+          alt="Chat WhatsApp JUMAX" 
+          className="w-16 h-16 md:w-20 md:h-20 object-contain"
          />
        </a>
     </div>

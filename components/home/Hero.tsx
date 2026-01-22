@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, ThumbsUp } from 'lucide-react';
+import { MessageCircle, ThumbsUp, Star } from 'lucide-react';
 import { CONTACT_INFO } from '../../constants';
 import { WarrantyBadge } from '../Icons';
 
@@ -22,10 +22,9 @@ export const Hero: React.FC = () => {
       <div className="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
         <div className="max-w-3xl pt-10 md:pt-20">
           
-          {/* Warranty Badge Image - Adjusted Size */}
-          <div className="mb-8 animate-fade-in-down">
-              {/* Ajuste de tamaño: w-32 (128px) en móvil, w-48 (192px) en desktop */}
-              <WarrantyBadge className="w-32 md:w-48 h-auto drop-shadow-2xl" />
+          {/* Warranty Badge Image - Adjusted Size to 100px as requested */}
+          <div className="mb-6 animate-fade-in-down">
+              <WarrantyBadge className="w-[100px] md:w-[130px] h-auto drop-shadow-2xl" />
           </div>
 
           {/* Headline */}
@@ -34,12 +33,12 @@ export const Hero: React.FC = () => {
           </h1>
 
           {/* Subtext */}
-          <p className="text-lg md:text-2xl text-slate-200 mb-10 max-w-2xl font-light leading-relaxed border-l-4 border-brand-orange pl-6">
+          <p className="text-lg md:text-2xl text-slate-200 mb-8 max-w-2xl font-light leading-relaxed border-l-4 border-brand-orange pl-6">
             Soluciones rápidas, limpias y garantizadas en Reynosa. Recupera la tranquilidad de tu hogar hoy mismo.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a 
               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
               className="bg-white text-slate-900 hover:bg-slate-50 font-bold py-4 px-8 rounded-xl text-lg transition shadow-xl flex items-center justify-center gap-2 group"
@@ -69,7 +68,9 @@ export const Hero: React.FC = () => {
                  </div>
                </div>
                <div>
-                  <div className="flex text-yellow-400 text-xs mb-0.5">★★★★★</div>
+                  <div className="flex text-yellow-400 text-xs mb-0.5">
+                    {[...Array(5)].map((_,i) => <Star key={i} size={10} fill="currentColor" />)}
+                  </div>
                   <p className="text-white text-xs font-medium">"Servicio rápido y limpio"</p>
                </div>
             </div>
@@ -77,25 +78,28 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Social Proof - Desktop (Floating Card) */}
-        <div className="absolute bottom-20 right-8 max-w-sm bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] border border-white/20 hidden md:flex items-center gap-5 animate-bounce-slow hover:bg-white/15 transition cursor-default">
+        {/* Adjusted bottom position to separate from footer/scroll area nicely */}
+        <div className="absolute bottom-16 right-8 max-w-sm bg-white/10 backdrop-blur-xl rounded-2xl p-5 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] border border-white/20 hidden md:flex items-center gap-4 animate-bounce-slow hover:bg-white/15 transition cursor-default">
             <div className="relative flex-shrink-0">
                <img 
                 src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" 
                 alt="Cliente Satisfecho" 
-                className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-lg"
+                className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-lg"
                />
-               <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-1.5 border-2 border-white flex items-center justify-center shadow-sm">
-                  <ThumbsUp size={14} className="text-white" />
+               <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-1 border-2 border-white flex items-center justify-center shadow-sm">
+                  <ThumbsUp size={10} className="text-white" />
                </div>
             </div>
             <div className="flex-1 min-w-0">
-              <h4 className="font-heading font-bold text-white text-lg truncate">Magdalena Mejia</h4>
-              <p className="text-slate-200 text-sm mt-1 leading-snug">
+              <h4 className="font-heading font-bold text-white text-base truncate">Magdalena Mejia</h4>
+              <p className="text-slate-200 text-xs mt-0.5 leading-snug">
                 "Excelente servicio. Llegaron rápido a la col. Petrolera y solucionaron todo."
               </p>
-              <div className="flex items-center gap-1 mt-2 bg-black/20 w-fit px-2 py-0.5 rounded-full">
-                 {[...Array(5)].map((_,i)=><span key={i} className="text-yellow-400 text-xs">★</span>)}
-                 <span className="text-xs text-white ml-1 font-bold">5.0</span>
+              <div className="flex items-center gap-1 mt-1.5 bg-black/20 w-fit px-2 py-0.5 rounded-full">
+                 <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_,i) => <Star key={i} size={10} fill="currentColor" />)}
+                 </div>
+                 <span className="text-[10px] text-white ml-1 font-bold">5.0</span>
               </div>
             </div>
         </div>
