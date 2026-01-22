@@ -14,7 +14,7 @@ export const FloatingWhatsApp: React.FC = () => {
          aria-label="Contactar por WhatsApp"
        >
          <img 
-          src="https://raw.githubusercontent.com/michstudio-cloud/Jumax/main/images/whatsapp-bot.png" 
+          src="https://res.cloudinary.com/dztjnc74v/image/upload/v1769053566/whatsapp-bot_o0ggw6.png" 
           alt="Chat WhatsApp JUMAX" 
           className="w-16 h-16 md:w-20 md:h-20 object-contain"
          />
