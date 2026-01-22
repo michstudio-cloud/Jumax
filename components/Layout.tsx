@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Star, MessageCircle, MapPin, Facebook, Instagram, ArrowUpRight } from 'lucide-react';
 import { CONTACT_INFO, NAV_LINKS, ROUTES } from '../constants';
+import { JumaxLogo } from './Icons'; // Importamos el logo SVG
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -27,14 +28,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
               <Link to={ROUTES.HOME} className="flex items-center gap-2" onClick={closeMenu}>
-                <img 
-                  src="/images/jumax-imagotipo.svg" 
-                  alt="JUMAX" 
-                  className="h-10 w-auto"
-                  fetchPriority="high"
-                  width="221"
-                  height="40"
-                />
+                {/* Usamos el componente SVG directamente */}
+                <JumaxLogo className="h-10 w-auto text-slate-900" />
               </Link>
             </div>
 
@@ -137,14 +132,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="mb-6 bg-white w-fit p-2 rounded-lg">
-               <img 
-                  src="/images/jumax-imagotipo.svg" 
-                  alt="JUMAX" 
-                  className="h-8 w-auto"
-                  width="221"
-                  height="40"
-                  loading="lazy"
-                />
+               <JumaxLogo className="h-8 w-auto text-slate-900" />
             </div>
             <p className="text-sm text-slate-400 mb-4">
               Soluciones rápidas y garantizadas para problemas de plomería y drenaje en todo Reynosa.

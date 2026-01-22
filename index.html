@@ -4,28 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JUMAX Reynosa | Plomería y Destape de Drenajes</title>
-    <!-- Favicon local -->
-    <link rel="icon" href="/images/whatsapp-bot.png" />
+    <!-- Favicon: Usamos un emoji svg inline para evitar 404 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
     
-    <!-- Manrope (Cuerpo de texto) -->
+    <!-- Google Fonts: Manrope + Space Grotesk (Reemplazo robusto para Cy Grotesk) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
-    <!-- Configuración de Fuente Local (Cy Grotesk) -->
-    <style>
-      @font-face {
-        font-family: 'Cy Grotesk';
-        /* 
-           IMPORTANTE: Debes crear una carpeta 'fonts' en la raíz y subir el archivo .woff2 allí.
-           Ruta relativa: /fonts/cy-grotesk-key-bold.woff2
-        */
-        src: url('/fonts/cy-grotesk-key-bold.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,18 +19,28 @@
           extend: {
             fontFamily: {
               sans: ['Manrope', 'sans-serif'],
-              heading: ['"Cy Grotesk"', 'sans-serif'], // Configurada como local
+              heading: ['"Space Grotesk"', 'sans-serif'], // Nueva fuente premium
             },
             colors: {
               brand: {
-                blue: '#0F172A', // Deep Slate Blue (Premium) instead of standard blue
-                lightBlue: '#3B82F6', // Vibrant blue for accents
-                orange: '#FF3600', // Updated brand color
-                darkOrange: '#D92E00', // Darker shade for hover
+                blue: '#0F172A', // Deep Slate Blue
+                lightBlue: '#3B82F6', 
+                orange: '#FF3600', // JUMAX Orange
+                darkOrange: '#D92E00',
               }
             },
             boxShadow: {
               'premium': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+            },
+            animation: {
+              'fade-in-down': 'fadeInDown 0.8s ease-out forwards',
+              'bounce-slow': 'bounce 3s infinite',
+            },
+            keyframes: {
+              fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
             }
           }
         }
