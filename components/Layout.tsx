@@ -31,6 +31,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   src="/images/jumax-imagotipo.svg" 
                   alt="JUMAX" 
                   className="h-10 w-auto"
+                  fetchPriority="high"
+                  width="221"
+                  height="40"
                 />
               </Link>
             </div>
@@ -138,6 +141,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   src="/images/jumax-imagotipo.svg" 
                   alt="JUMAX" 
                   className="h-8 w-auto"
+                  width="221"
+                  height="40"
+                  loading="lazy"
                 />
             </div>
             <p className="text-sm text-slate-400 mb-4">

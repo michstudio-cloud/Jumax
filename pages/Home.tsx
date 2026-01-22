@@ -19,6 +19,7 @@ const Home: React.FC = () => {
             src="/images/hero-bg.jpg" 
             alt="Plomero profesional trabajando" 
             className="w-full h-full object-cover object-center scale-105"
+            fetchPriority="high"
           />
           {/* Dark Overlay with Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/30"></div>
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
                     src="/images/badge_1.svg" 
                     alt="100% Garantía de Satisfacción" 
                     className="h-14 md:h-16 drop-shadow-lg"
+                    fetchPriority="high"
                 />
             </div>
 
@@ -104,6 +106,7 @@ const Home: React.FC = () => {
                     src="https://images.unsplash.com/photo-1632759929848-18544c01d904?auto=format&fit=crop&w=800&q=80" 
                     alt="Destape de drenaje" 
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    loading="lazy"
                  />
                  <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition duration-300"></div>
               </div>
@@ -123,6 +126,7 @@ const Home: React.FC = () => {
                     src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80" 
                     alt="Limpieza de tuberías" 
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    loading="lazy"
                  />
               </div>
               <div className="p-8 flex-grow">
@@ -141,6 +145,7 @@ const Home: React.FC = () => {
                     src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" 
                     alt="Plomería Residencial" 
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    loading="lazy"
                  />
               </div>
               <div className="p-8 flex-grow">
@@ -159,6 +164,7 @@ const Home: React.FC = () => {
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" 
                     alt="Plomería Comercial" 
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    loading="lazy"
                  />
               </div>
               <div className="p-8 flex-grow">
@@ -185,6 +191,7 @@ const Home: React.FC = () => {
                     src="https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&w=800&q=80" 
                     alt="Herramientas profesionales" 
                     className="rounded-2xl shadow-2xl relative z-10 w-full"
+                    loading="lazy"
                  />
                  {/* Decorative Box */}
                  <div className="absolute -bottom-6 -right-6 w-full h-full border-4 border-slate-100 rounded-2xl z-0"></div>
@@ -324,6 +331,7 @@ const Home: React.FC = () => {
          <a 
            href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
            className="transform transition hover:scale-110 drop-shadow-2xl"
+           aria-label="Contactar por WhatsApp"
          >
            <img 
             src="/images/whatsapp-bot.png" 
