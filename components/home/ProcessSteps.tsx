@@ -2,10 +2,10 @@ import React from 'react';
 
 export const ProcessSteps: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-blue text-white relative overflow-hidden">
+    <section className="py-24 bg-black text-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500 rounded-full blur-[100px]"></div>
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-slate-800 rounded-full blur-[100px]"></div>
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-orange rounded-full blur-[100px]"></div>
       </div>
 

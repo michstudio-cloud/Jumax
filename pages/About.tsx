@@ -9,9 +9,9 @@ const About: React.FC = () => {
 
   return (
     <div className="w-full">
-      <div className="bg-brand-darkBlue py-20 text-center text-white">
+      <div className="bg-black py-20 text-center text-white">
         <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Sobre JUMAX</h1>
-        <p className="text-xl text-blue-200">Tu aliado de confianza en plomería</p>
+        <p className="text-xl text-slate-400">Tu aliado de confianza en plomería</p>
       </div>
 
       <section className="py-16 md:py-24 bg-white">
@@ -26,21 +26,21 @@ const About: React.FC = () => {
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
              <div className="text-center p-6 bg-slate-50 rounded-xl">
-               <div className="bg-brand-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-blue">
+               <div className="bg-black/5 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-black">
                  <Users size={32} />
                </div>
                <h3 className="font-heading font-bold text-xl mb-2">Experiencia</h3>
                <p className="text-slate-500 text-lg">Años sirviendo a familias y negocios en Reynosa.</p>
              </div>
              <div className="text-center p-6 bg-slate-50 rounded-xl">
-               <div className="bg-brand-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-blue">
+               <div className="bg-black/5 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-black">
                  <Award size={32} />
                </div>
                <h3 className="font-heading font-bold text-xl mb-2">Calidad</h3>
                <p className="text-slate-500 text-lg">Utilizamos materiales de primera y herramientas especializadas.</p>
              </div>
              <div className="text-center p-6 bg-slate-50 rounded-xl">
-               <div className="bg-brand-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-blue">
+               <div className="bg-black/5 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-black">
                  <Star size={32} />
                </div>
                <h3 className="font-heading font-bold text-xl mb-2">Honestidad</h3>

@@ -158,7 +158,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-slate-200 p-2 flex gap-2 z-40 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
         <a 
           href={`tel:${CONTACT_INFO.phone}`}
-          className="flex-1 bg-brand-blue text-white py-3 rounded-lg font-bold flex justify-center items-center gap-2 active:bg-brand-darkBlue"
+          className="flex-1 bg-black text-white py-3 rounded-lg font-bold flex justify-center items-center gap-2 active:bg-slate-900"
         >
           <Phone size={20} /> Llamar
         </a>

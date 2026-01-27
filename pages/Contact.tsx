@@ -10,9 +10,9 @@ const Contact: React.FC = () => {
 
   return (
     <div className="w-full bg-slate-50">
-      <div className="bg-brand-darkBlue py-16 text-center text-white">
+      <div className="bg-black py-16 text-center text-white">
         <h1 className="text-4xl font-heading font-bold mb-4">Contáctanos</h1>
-        <p className="text-lg text-blue-200">Estamos listos para atender tu emergencia</p>
+        <p className="text-lg text-slate-400">Estamos listos para atender tu emergencia</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -23,12 +23,12 @@ const Contact: React.FC = () => {
             <h2 className="text-2xl font-heading font-bold text-slate-900">Información de Contacto</h2>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-50 p-3 rounded-full text-brand-blue">
+                <div className="bg-slate-100 p-3 rounded-full text-black">
                   <Phone size={24} />
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-slate-800">Teléfono</h3>
-                  <a href={`tel:${CONTACT_INFO.phone}`} className="text-slate-600 hover:text-brand-blue text-lg block mt-1">
+                  <a href={`tel:${CONTACT_INFO.phone}`} className="text-slate-600 hover:text-black text-lg block mt-1">
                     {CONTACT_INFO.displayPhone}
                   </a>
                 </div>
@@ -75,15 +75,15 @@ const Contact: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-1">Nombre Completo</label>
-                  <input type="text" className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="Tu nombre" />
+                  <input type="text" className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-black focus:border-black outline-none transition" placeholder="Tu nombre" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-1">Teléfono</label>
-                  <input type="tel" className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="Tu número de celular" />
+                  <input type="tel" className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-black focus:border-black outline-none transition" placeholder="Tu número de celular" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-1">Servicio de interés</label>
-                  <select className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                  <select className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-black focus:border-black outline-none transition">
                     <option>Destape de Drenaje</option>
                     <option>Plomería General</option>
                     <option>Fugas de Agua</option>
@@ -92,9 +92,9 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-1">Mensaje</label>
-                  <textarea className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition h-32" placeholder="Describe brevemente tu problema..."></textarea>
+                  <textarea className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-black focus:border-black outline-none transition h-32" placeholder="Describe brevemente tu problema..."></textarea>
                 </div>
-                <button className="w-full bg-brand-blue hover:bg-brand-darkBlue text-white font-bold py-4 rounded-lg transition text-lg">
+                <button className="w-full bg-black hover:bg-slate-800 text-white font-bold py-4 rounded-lg transition text-lg">
                   Enviar Mensaje
                 </button>
                 <p className="text-xs text-slate-400 text-center mt-4">

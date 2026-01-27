@@ -6,24 +6,24 @@ import { ROUTES } from '../../constants';
 export const IntegralSolutions: React.FC = () => {
   return (
     <section className="w-full">
-      {/* Massive Blue Banner */}
-      <div className="relative w-full bg-[#0088cc] overflow-hidden min-h-[500px] flex items-center">
+      {/* Massive Black Banner */}
+      <div className="relative w-full bg-black overflow-hidden min-h-[500px] flex items-center">
         
         {/* Background Image with Blend Mode */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" 
             alt="Construcción y Soluciones Integrales" 
-            className="w-full h-full object-cover mix-blend-multiply opacity-60 grayscale-[20%]"
+            className="w-full h-full object-cover mix-blend-multiply opacity-60 grayscale-[100%]"
           />
-          <div className="absolute inset-0 bg-[#0088cc] mix-blend-color opacity-50"></div>
+          <div className="absolute inset-0 bg-black mix-blend-color opacity-70"></div>
         </div>
 
         {/* CTA Button - Top Right Absolute */}
         <div className="absolute top-0 right-0 z-20 hidden md:block">
             <Link 
               to={ROUTES.ABOUT} 
-              className="bg-slate-900 text-white font-bold tracking-widest text-sm py-6 px-12 flex items-center gap-3 hover:bg-black transition-colors uppercase"
+              className="bg-brand-orange text-white font-bold tracking-widest text-sm py-6 px-12 flex items-center gap-3 hover:bg-brand-darkOrange transition-colors uppercase"
             >
               Conócenos <ArrowRight size={18} />
             </Link>
@@ -47,7 +47,7 @@ export const IntegralSolutions: React.FC = () => {
             
             {/* Feature 1 */}
             <div className="flex items-start gap-6">
-              <div className="text-slate-800 shrink-0">
+              <div className="text-black shrink-0">
                  <HardHat strokeWidth={1} size={48} />
               </div>
               <p className="text-slate-600 text-lg leading-snug">
@@ -57,7 +57,7 @@ export const IntegralSolutions: React.FC = () => {
 
             {/* Feature 2 */}
             <div className="flex items-start gap-6">
-              <div className="text-slate-800 shrink-0">
+              <div className="text-black shrink-0">
                  <Cone strokeWidth={1} size={48} />
               </div>
               <p className="text-slate-600 text-lg leading-snug">
@@ -67,7 +67,7 @@ export const IntegralSolutions: React.FC = () => {
 
             {/* Feature 3 */}
             <div className="flex items-start gap-6">
-              <div className="text-slate-800 shrink-0">
+              <div className="text-black shrink-0">
                  <Layers strokeWidth={1} size={48} />
               </div>
               <p className="text-slate-600 text-lg leading-snug">

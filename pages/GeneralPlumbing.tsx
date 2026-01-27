@@ -17,7 +17,7 @@ const GeneralPlumbing: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-brand-blue px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+              <div className="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 text-black px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                 <Shield size={16} /> SERVICIO CERTIFICADO EN REYNOSA
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-black text-slate-900 mb-6 leading-tight">
@@ -30,7 +30,7 @@ const GeneralPlumbing: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
                    href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Hola JUMAX, busco un plomero para...`}
-                   className="bg-brand-blue hover:bg-slate-800 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-xl hover:shadow-2xl transition flex items-center justify-center gap-2"
+                   className="bg-black hover:bg-slate-800 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-xl hover:shadow-2xl transition flex items-center justify-center gap-2"
                 >
                   Solicitar Plomero <ArrowRight size={20} />
                 </a>
@@ -44,7 +44,7 @@ const GeneralPlumbing: React.FC = () => {
             </div>
             
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-brand-blue to-brand-orange rounded-full opacity-10 blur-3xl"></div>
+              <div className="absolute -inset-4 bg-gradient-to-tr from-slate-900 to-brand-orange rounded-full opacity-10 blur-3xl"></div>
               <img 
                 src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1000" 
                 alt="Plomero JUMAX Reynosa" 
@@ -73,7 +73,7 @@ const GeneralPlumbing: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1: Presión / Bombas */}
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
-              <div className="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center text-brand-blue mb-6 group-hover:bg-brand-blue group-hover:text-white transition">
+              <div className="bg-slate-100 w-16 h-16 rounded-2xl flex items-center justify-center text-black mb-6 group-hover:bg-black group-hover:text-white transition">
                 <Settings size={32} />
               </div>
               <h3 className="text-xl font-heading font-bold text-slate-900 mb-4">Bombas y Tinacos</h3>
@@ -125,10 +125,10 @@ const GeneralPlumbing: React.FC = () => {
       {/* 3. SOCIAL PROOF & OBJECTION HANDLING */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-brand-blue rounded-3xl p-8 md:p-16 text-white flex flex-col md:flex-row items-center gap-12 shadow-2xl">
+          <div className="bg-black rounded-3xl p-8 md:p-16 text-white flex flex-col md:flex-row items-center gap-12 shadow-2xl">
             <div className="md:w-1/2 space-y-6">
                <h2 className="text-3xl font-heading font-bold">¿Por qué confiar en JUMAX?</h2>
-               <p className="text-blue-100 text-lg">
+               <p className="text-slate-300 text-lg">
                  Sabemos que es difícil encontrar un buen plomero en Reynosa. Muchos no llegan, cobran de más o dejan el trabajo sucio.
                </p>
                <div className="space-y-4 pt-4">

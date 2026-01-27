@@ -32,7 +32,7 @@ export const WhyChooseUs: React.FC = () => {
             
             <div className="space-y-8">
               <div className="flex items-start gap-5">
-                <div className="bg-blue-50 p-4 rounded-xl text-brand-blue shrink-0">
+                <div className="bg-slate-50 p-4 rounded-xl text-black shrink-0">
                   <MapPin size={28} />
                 </div>
                 <div>

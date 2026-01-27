@@ -98,7 +98,7 @@ const DrainCleaning: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Benefit 1 */}
             <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition duration-300">
-              <div className="bg-brand-blue/10 w-14 h-14 rounded-full flex items-center justify-center text-brand-blue mb-6">
+              <div className="bg-slate-100 w-14 h-14 rounded-full flex items-center justify-center text-black mb-6">
                 <ShieldCheck size={32} />
               </div>
               <h3 className="text-xl font-heading font-bold text-slate-900 mb-3">Sin Romper Pisos</h3>
@@ -201,10 +201,10 @@ const DrainCleaning: React.FC = () => {
       </section>
 
       {/* 5. FINAL CTA */}
-      <section className="py-20 bg-brand-blue text-center text-white px-4">
+      <section className="py-20 bg-black text-center text-white px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">¡No esperes a que se inunde!</h2>
-          <p className="text-xl text-blue-100 mb-10">
+          <p className="text-xl text-slate-300 mb-10">
             Agenda hoy mismo y recibe un diagnóstico profesional. Precios claros desde el principio.
           </p>
           <a 
