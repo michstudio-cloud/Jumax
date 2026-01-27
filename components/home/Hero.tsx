@@ -29,18 +29,18 @@ export const Hero: React.FC = () => {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-bold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-xl">
-            ¿Problemas de drenaje <br className="hidden md:block" /><span className="text-brand-orange">en tu hogar?</span>
+            ¿Drenaje Tapado o <br className="hidden md:block" />Fugas <span className="text-brand-orange">en Reynosa?</span>
           </h1>
 
           {/* Subtext */}
           <p className="text-lg md:text-2xl text-slate-200 mb-8 max-w-2xl font-light leading-relaxed border-l-4 border-brand-orange pl-6">
-            Soluciones rápidas, limpias y garantizadas en Reynosa. Recupera la tranquilidad de tu hogar hoy mismo.
+            Llegamos en menos de 2 horas. Soluciones definitivas, limpias y garantizadas para tu hogar o negocio.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a 
-              href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
+              href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Hola, necesito cotizar un servicio de plomería urgente.`}
               className="bg-white text-slate-900 hover:bg-slate-50 font-bold py-4 px-8 rounded-xl text-lg transition shadow-xl flex items-center justify-center gap-2 group"
             >
               <MessageCircle className="text-green-600 group-hover:scale-110 transition"/>

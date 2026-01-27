@@ -1,209 +1,222 @@
 import React, { useEffect } from 'react';
-import { Check, AlertTriangle, HelpCircle, ArrowRight } from 'lucide-react';
+import { Check, AlertTriangle, Clock, ShieldCheck, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
 
 const DrainCleaning: React.FC = () => {
   useEffect(() => {
-    document.title = "Destape de drenajes en Reynosa | Limpieza profesional JUMAX";
+    document.title = "Destape de Drenajes en Reynosa | JUMAX Urgencias 24/7";
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="w-full font-sans">
-      {/* Header */}
-      <header className="bg-slate-900 text-white py-20 md:py-32 relative overflow-hidden">
-         {/* Background Subtle Image */}
-         <div className="absolute inset-0 z-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1616198814651-e71f960c3180?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="Background Texture" />
+    <div className="w-full font-sans text-slate-800">
+      
+      {/* 1. HERO SECTION - High Urgency / Conversion */}
+      <header className="relative bg-slate-900 text-white pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+         {/* Background with darker overlay for text readability */}
+         <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1616198814651-e71f960c3180?q=80&w=2070&auto=format&fit=crop" 
+              className="w-full h-full object-cover opacity-30" 
+              alt="Tubería limpia y funcional" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/90 to-slate-900"></div>
          </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <span className="text-brand-orange font-bold tracking-widest uppercase mb-4 block">Especialistas Certificados</span>
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">Destape y Limpieza <br/>de Drenajes en Reynosa</h1>
-          <p className="text-xl text-slate-300 max-w-3xl font-light leading-relaxed">
-            Servicio especializado en desazolve y destape de tuberías. Solucionamos problemas de flujo lento, malos olores y obstrucciones totales con equipo industrial.
-          </p>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-3/5">
+              <div className="inline-block bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full mb-4 animate-pulse">
+                ¡LLEGAMOS EN MENOS DE 2 HORAS!
+              </div>
+              <h1 className="text-4xl md:text-6xl font-heading font-black mb-6 leading-tight">
+                ¿Drenaje Tapado en <span className="text-brand-orange">Reynosa?</span> <br/>
+                <span className="text-2xl md:text-4xl font-medium text-slate-300 block mt-2">Lo solucionamos sin romper tus pisos.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-slate-300 mb-8 font-light max-w-2xl leading-relaxed">
+                Olvídate de los malos olores y el agua estancada. Usamos equipo eléctrico industrial para destapar WC, fregaderos y registros al instante.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a 
+                  href={`tel:${CONTACT_INFO.phone}`}
+                  className="bg-brand-orange hover:bg-brand-darkOrange text-white font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-orange-500/30 transition transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                >
+                  <Phone size={20} /> Llamar Ahora
+                </a>
+                <a 
+                  href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Hola JUMAX, tengo una urgencia con mi drenaje en Reynosa.`}
+                  className="bg-white text-slate-900 hover:bg-slate-50 font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition flex items-center justify-center gap-2"
+                >
+                  Cotizar por WhatsApp
+                </a>
+              </div>
+              <p className="mt-4 text-sm text-slate-400 flex items-center justify-center md:justify-start gap-2">
+                <ShieldCheck size={16} className="text-green-500" /> Garantía de 30 días por escrito.
+              </p>
+            </div>
+
+            {/* Visual Hook - Mobile friendly card */}
+            <div className="md:w-2/5 w-full">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-2xl">
+                <h3 className="text-xl font-bold text-white mb-4 border-b border-white/20 pb-2">¿Identificas estos problemas?</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3 text-slate-200">
+                    <AlertTriangle className="text-yellow-400 shrink-0 mt-1" size={18} />
+                    <span>El agua del WC sube y baja lento.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-200">
+                    <AlertTriangle className="text-yellow-400 shrink-0 mt-1" size={18} />
+                    <span>Mal olor saliendo de las coladeras.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-200">
+                    <AlertTriangle className="text-yellow-400 shrink-0 mt-1" size={18} />
+                    <span>Gorgoreos en las tuberías al lavar.</span>
+                  </li>
+                </ul>
+                <div className="mt-6 bg-red-500/20 border border-red-500/50 p-3 rounded-lg text-center">
+                  <p className="text-sm font-bold text-red-100">¡Actúa antes de que se inunde!</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
-      {/* Intro / Problem Solution */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">¿Drenaje lento o completamente tapado?</h2>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Un drenaje obstruido no solo es molesto, puede causar daños graves a tu propiedad y riesgos sanitarios. En JUMAX, utilizamos equipo profesional para eliminar el problema de raíz, no solo "empujarlo".
+      {/* 2. PAIN AGITATION & SOLUTION */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">
+              ¿Por qué elegir JUMAX para tu destape?
+            </h2>
+            <p className="text-lg text-slate-600">
+              Muchos "plomeros" intentan destapar con varillas, rompiendo tubos y pisos. Nosotros somos especialistas equipados.
             </p>
-            <ul className="space-y-4 mb-10">
-              <li className="flex items-center gap-4 text-slate-700 font-medium text-lg">
-                <div className="bg-green-100 p-1 rounded-full"><Check className="text-green-600" size={16} /></div> 
-                Sin romper pisos (en la mayoría de los casos)
-              </li>
-              <li className="flex items-center gap-4 text-slate-700 font-medium text-lg">
-                <div className="bg-green-100 p-1 rounded-full"><Check className="text-green-600" size={16} /></div> 
-                Maquinaria eléctrica especializada
-              </li>
-              <li className="flex items-center gap-4 text-slate-700 font-medium text-lg">
-                 <div className="bg-green-100 p-1 rounded-full"><Check className="text-green-600" size={16} /></div> 
-                 Atención a comercios y residencias
-              </li>
-            </ul>
-             <a 
-                href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
-                className="bg-brand-blue hover:bg-slate-800 text-white font-bold py-4 px-8 rounded-lg transition inline-flex items-center gap-2 shadow-lg"
-              >
-                Cotiza tu destape por WhatsApp
-              </a>
           </div>
-          <div className="relative">
-             <img 
-                src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=1000" 
-                alt="Baño limpio y moderno" 
-                className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
-             />
-             <div className="absolute bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg border-l-4 border-brand-orange max-w-xs">
-                <p className="text-sm font-bold text-slate-800">Recupera la higiene de tu hogar hoy mismo.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Benefit 1 */}
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition duration-300">
+              <div className="bg-brand-blue/10 w-14 h-14 rounded-full flex items-center justify-center text-brand-blue mb-6">
+                <ShieldCheck size={32} />
+              </div>
+              <h3 className="text-xl font-heading font-bold text-slate-900 mb-3">Sin Romper Pisos</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Nuestra maquinaria de sonda eléctrica entra por el registro o la coladera, triturando obstrucciones sin necesidad de obras costosas de albañilería.
+              </p>
+            </div>
+
+            {/* Benefit 2 */}
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition duration-300">
+              <div className="bg-brand-orange/10 w-14 h-14 rounded-full flex items-center justify-center text-brand-orange mb-6">
+                <Clock size={32} />
+              </div>
+              <h3 className="text-xl font-heading font-bold text-slate-900 mb-3">Servicio Express Reynosa</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Sabemos que es una emergencia. Tenemos unidades listas en sectores clave (Fuentes, Jarachina, Centro) para llegar rápido.
+              </p>
+            </div>
+
+            {/* Benefit 3 */}
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition duration-300">
+              <div className="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center text-green-600 mb-6">
+                <Check size={32} />
+              </div>
+              <h3 className="text-xl font-heading font-bold text-slate-900 mb-3">Garantía Real</h3>
+              <p className="text-slate-600 leading-relaxed">
+                No cobramos "visitas fantasma". Si realizamos el trabajo, tienes 30 días de garantía. Tu satisfacción es nuestra reputación.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. SERVICE TYPES (Targeting specific keywords) */}
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+        {/* Decoracion */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange rounded-full blur-[100px] opacity-20"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+             <div>
+               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
+                 Atendemos cualquier obstrucción <br/> <span className="text-brand-orange">Residencial y Comercial</span>
+               </h2>
+               <p className="text-slate-400 text-lg mb-8">
+                 Desde un lavabo lento hasta el registro principal de un restaurante colapsado por grasa.
+               </p>
+               
+               <div className="space-y-4">
+                 <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                   <div className="bg-brand-orange p-2 rounded-full"><Check size={20} /></div>
+                   <span className="font-bold text-lg">Destape de WC (Inodoros)</span>
+                 </div>
+                 <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                   <div className="bg-brand-orange p-2 rounded-full"><Check size={20} /></div>
+                   <span className="font-bold text-lg">Limpieza de Fregaderos y Trampas de Grasa</span>
+                 </div>
+                 <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                   <div className="bg-brand-orange p-2 rounded-full"><Check size={20} /></div>
+                   <span className="font-bold text-lg">Desazolve de Registros Principales</span>
+                 </div>
+                 <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                   <div className="bg-brand-orange p-2 rounded-full"><Check size={20} /></div>
+                   <span className="font-bold text-lg">Bajantes Pluviales y de Drenaje</span>
+                 </div>
+               </div>
+             </div>
+
+             <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&q=80&w=1000" 
+                  alt="Equipo profesional de destape JUMAX" 
+                  className="rounded-2xl shadow-2xl border-4 border-slate-700"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-white text-slate-900 p-6 rounded-xl shadow-xl max-w-xs hidden md:block">
+                  <p className="font-bold text-lg mb-2">"¡Recuperé mi baño en 30 minutos!"</p>
+                  <div className="flex text-yellow-500 mb-1">★★★★★</div>
+                  <p className="text-sm text-slate-500">- Cliente en Col. Aztlán</p>
+                </div>
              </div>
           </div>
         </div>
       </section>
 
-      {/* What includes */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-             <h2 className="text-3xl font-heading font-bold text-slate-900">¿Qué incluye nuestro servicio?</h2>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-              <h3 className="font-heading font-bold text-xl mb-3 text-slate-900">Destape de Tuberías</h3>
-              <p className="text-slate-500 text-lg leading-relaxed">Removemos obstrucciones sólidas, juguetes, raíces y acumulaciones utilizando sondas eléctricas.</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-              <h3 className="font-heading font-bold text-xl mb-3 text-slate-900">Limpieza Profunda</h3>
-              <p className="text-slate-500 text-lg leading-relaxed">Raspado de paredes internas de la tubería para recuperar el diámetro original y mejorar el flujo.</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-              <h3 className="font-heading font-bold text-xl mb-3 text-slate-900">Eliminación de Residuos</h3>
-              <p className="text-slate-500 text-lg leading-relaxed">Extracción de grasa solidificada y sedimentos que causan malos olores recurrentes.</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-              <h3 className="font-heading font-bold text-xl mb-3 text-slate-900">Asesoría Preventiva</h3>
-              <p className="text-slate-500 text-lg leading-relaxed">Te explicamos la causa del problema y cómo evitar futuros tapones en tu red sanitaria.</p>
-            </div>
-          </div>
+      {/* 4. LOCAL SEO FOOTER BANNER */}
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+           <p className="flex flex-wrap justify-center items-center gap-2 text-slate-500 font-medium">
+             <MapPin size={18} className="text-brand-orange" />
+             Atendiendo urgencias en:
+             <span className="bg-slate-100 px-2 py-1 rounded text-slate-700">Las Fuentes</span>
+             <span className="bg-slate-100 px-2 py-1 rounded text-slate-700">Jarachina</span>
+             <span className="bg-slate-100 px-2 py-1 rounded text-slate-700">La Cima</span>
+             <span className="bg-slate-100 px-2 py-1 rounded text-slate-700">Vista Hermosa</span>
+             <span className="bg-slate-100 px-2 py-1 rounded text-slate-700">Petrolera</span>
+             <span className="bg-slate-100 px-2 py-1 rounded text-slate-700">Centro</span>
+             <span className="text-slate-400 text-sm">(y todo Reynosa)</span>
+           </p>
         </div>
       </section>
 
-      {/* Types of drains */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Atendemos todo tipo de drenajes</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="font-semibold text-slate-700 text-lg">Baños (WC)</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="font-semibold text-slate-700 text-lg">Fregaderos</span>
-                </div>
-                 <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="font-semibold text-slate-700 text-lg">Lavabos</span>
-                </div>
-                 <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="font-semibold text-slate-700 text-lg">Regaderas</span>
-                </div>
-                 <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="font-semibold text-slate-700 text-lg">Registros</span>
-                </div>
-                 <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="font-semibold text-slate-700 text-lg">Bajantes</span>
-                </div>
-              </div>
-            </div>
-            <div className="bg-slate-900 p-10 rounded-2xl text-white relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange rounded-full blur-[60px] opacity-20"></div>
-              <h3 className="text-2xl font-heading font-bold mb-6 flex items-center gap-3">
-                <AlertTriangle className="text-brand-orange" />
-                ¿Por qué se tapa el drenaje?
-              </h3>
-              <ul className="space-y-6">
-                <li className="border-b border-slate-700 pb-4 last:border-0 last:pb-0">
-                  <strong className="text-brand-orange block mb-1 text-lg">Grasa y Aceite</strong> 
-                  <span className="text-slate-300 text-lg">Al enfriarse se solidifican creando tapones duros como piedra que reducen el diámetro de la tubería.</span>
-                </li>
-                <li className="border-b border-slate-700 pb-4 last:border-0 last:pb-0">
-                  <strong className="text-brand-orange block mb-1 text-lg">Cabello y Jabón</strong> 
-                  <span className="text-slate-300 text-lg">Común en regaderas, crean nudos fibrosos que atrapan otros desechos rápidamente.</span>
-                </li>
-                <li className="border-b border-slate-700 pb-4 last:border-0 last:pb-0">
-                  <strong className="text-brand-orange block mb-1 text-lg">Raíces</strong> 
-                  <span className="text-slate-300 text-lg">En registros exteriores, las raíces buscan la humedad y pueden romper tuberías de concreto o barro.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Accordion */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-           <h2 className="text-3xl font-heading font-bold text-center text-slate-900 mb-12 flex justify-center items-center gap-3">
-             <HelpCircle size={32} className="text-brand-orange" />
-             Preguntas Frecuentes
-           </h2>
-           <div className="space-y-4">
-             <details className="bg-white p-6 rounded-2xl shadow-sm cursor-pointer group border border-slate-100">
-               <summary className="font-heading font-bold text-lg text-slate-900 flex justify-between items-center list-none">
-                 ¿Atienden urgencias en Reynosa?
-                 <span className="text-brand-orange group-open:rotate-180 transition transform">▼</span>
-               </summary>
-               <p className="mt-4 text-slate-600 text-lg leading-relaxed">Sí, ofrecemos servicio urgente. Entendemos que un drenaje tapado no puede esperar. Llámanos para verificar disponibilidad inmediata.</p>
-             </details>
-
-             <details className="bg-white p-6 rounded-2xl shadow-sm cursor-pointer group border border-slate-100">
-               <summary className="font-heading font-bold text-lg text-slate-900 flex justify-between items-center list-none">
-                 ¿Cuánto cuesta destapar un drenaje?
-                 <span className="text-brand-orange group-open:rotate-180 transition transform">▼</span>
-               </summary>
-               <p className="mt-4 text-slate-600 text-lg leading-relaxed">El precio depende de la gravedad del tapón y la ubicación (baño, cocina, registro principal). Contáctanos por WhatsApp para darte una estimación precisa.</p>
-             </details>
-
-             <details className="bg-white p-6 rounded-2xl shadow-sm cursor-pointer group border border-slate-100">
-               <summary className="font-heading font-bold text-lg text-slate-900 flex justify-between items-center list-none">
-                 ¿Dan garantía por el servicio?
-                 <span className="text-brand-orange group-open:rotate-180 transition transform">▼</span>
-               </summary>
-               <p className="mt-4 text-slate-600 text-lg leading-relaxed">Absolutamente. Garantizamos que el flujo del agua quedará restablecido. Si el problema persiste inmediatamente, regresamos a revisarlo.</p>
-             </details>
-
-             <details className="bg-white p-6 rounded-2xl shadow-sm cursor-pointer group border border-slate-100">
-               <summary className="font-heading font-bold text-lg text-slate-900 flex justify-between items-center list-none">
-                 ¿En cuánto tiempo llegan?
-                 <span className="text-brand-orange group-open:rotate-180 transition transform">▼</span>
-               </summary>
-               <p className="mt-4 text-slate-600 text-lg leading-relaxed">Nuestros técnicos están ubicados estratégicamente en Reynosa. Normalmente llegamos en menos de 2 horas tras confirmar tu servicio.</p>
-             </details>
-           </div>
-        </div>
-      </section>
-
-      {/* Local SEO Reinforcement */}
-      <section className="py-12 bg-white text-center border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4">
-          <p className="text-slate-400 text-sm">
-            Brindamos servicio de destape de drenajes en colonias de Reynosa como: Las Fuentes, Jarachina, Petrolera, Aztlán, Centro, Rodríguez, Longoria, Vista Hermosa y más.
+      {/* 5. FINAL CTA */}
+      <section className="py-20 bg-brand-blue text-center text-white px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">¡No esperes a que se inunde!</h2>
+          <p className="text-xl text-blue-100 mb-10">
+            Agenda hoy mismo y recibe un diagnóstico profesional. Precios claros desde el principio.
           </p>
+          <a 
+            href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Hola JUMAX, necesito cotizar un destape de drenaje.`}
+            className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-5 px-10 rounded-full text-xl shadow-2xl hover:scale-105 transition"
+          >
+            <Phone size={24} />
+            Pedir Cotización por WhatsApp
+          </a>
         </div>
       </section>
+
     </div>
   );
 };
