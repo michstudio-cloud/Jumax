@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Star, MessageCircle, MapPin, Facebook, Instagram, ArrowUpRight } from 'lucide-react';
+import { Menu, X, Phone, Star, MessageCircle, MapPin, ArrowUpRight, Calculator } from 'lucide-react';
 import { CONTACT_INFO, NAV_LINKS, ROUTES } from '../constants';
 import { JumaxLogo } from './Icons'; // Importamos el logo SVG
+import { Footer } from './Footer';
+import { QuoteModal } from './QuoteModal';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -10,10 +12,15 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+  const openQuoteModal = () => {
+    setIsQuoteModalOpen(true);
+    setIsMenuOpen(false);
+  };
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -48,15 +55,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* Separator */}
               <div className="h-8 w-px bg-slate-200"></div>
 
-              {/* Status */}
-              <div className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-bold text-slate-900 uppercase tracking-wide">DISPONIBLE</span>
-              </div>
-
-               {/* Separator */}
-               <div className="h-8 w-px bg-slate-200"></div>
-
               {/* Phone */}
               <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center gap-2 group">
                 <span className="text-lg font-light text-slate-600 group-hover:text-slate-900 transition">
@@ -64,13 +62,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </span>
                 <ArrowUpRight size={16} className="text-brand-orange" />
               </a>
+
+               {/* Separator */}
+               <div className="h-8 w-px bg-slate-200"></div>
+              
+              {/* Quote Button */}
+              <button 
+                onClick={openQuoteModal}
+                className="bg-brand-orange hover:bg-brand-darkOrange text-white text-sm font-bold py-3 px-6 rounded-full transition shadow-lg hover:shadow-xl flex items-center gap-2"
+              >
+                <Calculator size={18} />
+                COTIZAR AHORA
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex items-center lg:hidden">
-               <a href={`tel:${CONTACT_INFO.phone}`} className="mr-4 text-slate-900 font-bold">
-                  {CONTACT_INFO.displayPhone}
-               </a>
+            <div className="flex items-center lg:hidden gap-4">
+               {/* Mobile Quote Icon */}
+               <button 
+                onClick={openQuoteModal}
+                className="bg-brand-orange text-white p-2 rounded-full shadow-md active:scale-95 transition"
+               >
+                 <Calculator size={20} />
+               </button>
+
               <button
                 onClick={toggleMenu}
                 className="text-slate-900 hover:text-brand-orange focus:outline-none p-2"
@@ -112,14 +127,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   {link.label}
                 </Link>
               ))}
+              <button
+                onClick={openQuoteModal}
+                className="w-full text-left block px-3 py-4 rounded-md text-base font-bold text-white bg-slate-900 mt-4 flex items-center gap-2"
+              >
+                <Calculator size={18} /> Solicitar Cotización
+              </button>
             </div>
           </div>
         )}
       </nav>
 
-      {/* Black Promo Bar */}
-      <div className="bg-slate-900 text-white text-xs md:text-sm py-2 px-4 text-center font-medium">
-        Obtén tu diagnóstico sin costo al realizar el trabajo con nosotros. 🚀 <span className="text-slate-400 font-light ml-2">*Solo diagnóstico $300</span>
+      {/* Black Promo Bar - Clickable to Open Modal */}
+      <div 
+        onClick={openQuoteModal}
+        className="bg-slate-900 text-white text-xs md:text-sm py-2 px-4 text-center font-medium cursor-pointer hover:bg-black transition-colors"
+      >
+        Obtén tu diagnóstico sin costo al realizar el trabajo con nosotros. 🚀 <span className="text-slate-400 font-light ml-2 underline decoration-brand-orange underline-offset-2 decoration-2">*Solo diagnóstico $300 (Clic para Cotizar)</span>
       </div>
 
       {/* Page Content */}
@@ -127,48 +151,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-300 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <div className="mb-6 bg-white w-fit p-2 rounded-lg">
-               <JumaxLogo className="h-8 w-auto text-slate-900" />
-            </div>
-            <p className="text-sm text-slate-400 mb-4">
-              Soluciones rápidas y garantizadas para problemas de plomería y drenaje en todo Reynosa.
-            </p>
-            <div className="flex space-x-4">
-              <Facebook className="hover:text-brand-orange cursor-pointer transition" />
-              <Instagram className="hover:text-brand-orange cursor-pointer transition" />
-            </div>
-          </div>
-          <div>
-            <h3 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Servicios</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link to={ROUTES.DRAIN_CLEANING} className="hover:text-brand-orange transition">Destape de Drenaje</Link></li>
-              <li><Link to={ROUTES.PLUMBING} className="hover:text-brand-orange transition">Plomería General</Link></li>
-              <li><Link to={ROUTES.PLUMBING} className="hover:text-brand-orange transition">Fugas de Agua</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contacto</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-brand-orange flex-shrink-0 mt-0.5" />
-                <span>{CONTACT_INFO.city}</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-brand-orange flex-shrink-0" />
-                <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-white transition">{CONTACT_INFO.displayPhone}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} JUMAX Reynosa.</p>
-          <Link to={ROUTES.PRIVACY} className="hover:text-brand-orange ml-4">Privacidad</Link>
-        </div>
-      </footer>
+      {/* New Visual Footer */}
+      <Footer />
 
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-slate-200 p-2 flex gap-2 z-40 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
@@ -187,6 +171,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </div>
       
       <div className="h-20 md:hidden" />
+
+      {/* Quote Modal */}
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );
 };
